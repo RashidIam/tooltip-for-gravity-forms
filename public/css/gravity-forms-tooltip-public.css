@@ -1,0 +1,54 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+
+/* Tooltip css */
+
+.gravity-tooltip {
+    position: relative;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background: url(../images/i.png) no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    cursor: pointer;
+}
+  
+.gravity-tooltip .gravity-tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px 7px;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    bottom: -13px;
+    left: 147%;
+    font-size: 12px;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+}
+  
+.gravity-tooltip .gravity-tooltiptext::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    margin-top: 0px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent hsla(0, 0%, 20%, 0.9) transparent transparent;
+}
+.gravity-tooltip:hover .gravity-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition:         
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+}
